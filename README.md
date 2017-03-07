@@ -14,8 +14,8 @@ GO编译到机器码非常快速，同时具有遍历的垃圾回收和强大的
 ```
 etc目录下profile文件
 ```
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT
+   export GOROOT=/usr/local/go
+   export PATH=$PATH:$GOROOT
 ```
 
 ### Chapter-1:HelloWorld ###
@@ -24,3 +24,61 @@ export PATH=$PATH:$GOROOT
 - 接下来是```import xxx```,在本次示例中我们引入了fmt包的函数用来打印字符串,在Go语言中字符串由 " 包裹,并且可以包含非ASCll的字符
 - 编译&运行:
 - 构建HelloWorld只需要在控制台执行  ```go build HelloWorld.go```,编译后在工作目录下得到一个可执行文件 HelloWorld
+
+### Chanpter-2: 变量、基本类型###
+- Go语言同其它语言不通的地方在于变量的类型在变量名后面。例如JAVA:  int a;  Go:  a int;
+- 当定义了一个变量,它默认值为null值 例如 a int;  a=0  || a string;  a=""
+- 在Go中变量的声明和赋值是两个过程,但是可以连在一起,例如
+```
+    var a int;
+    var b int;
+    a=1;
+    b=2;
+    fmt.Println(a+b);
+```
+- :=声明并赋值的方式仅用于函数体内
+- 多类型声明,注意小括号的用法,在Go语言中,声明但未使用的变量在运行时会报错
+```
+    var (
+        c int
+        d bool
+    )
+
+    fmt.Println(c,d);
+```
+- 相同类型多个变量的声明方式
+```
+    var e,f int;
+    e,f = 1,2;
+    fmt.Println(e,f);
+
+    g,h:=1,2;
+    fmt.Println(g,h);
+```
+
+- 特殊变量 _,此时i 为 4 ,如果打印_的话,控制台会输出cannot use _ as value ,究其原因为:任何值赋给_都将会被丢弃
+```
+    _,i := 3,4;
+    fmt.Println(i);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
