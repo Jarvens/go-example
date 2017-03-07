@@ -79,9 +79,26 @@ etc目录下profile文件
     b = 12;
     fmt.Println(a + b);
 ```
+```
+   const(
+        c =iota
+        d = iota
+    )
+    fmt.Println(c,d);
+```
+```
+   const(
+        e =iota
+        f      //隐士调用iota
+    )
 
-
-
+    fmt.Println(e,f);
+```
+```
+    var g string ="中国";
+    var h float32 = 3.1415926;
+    fmt.Println(g,h);
+```
 
 
 
