@@ -17,6 +17,7 @@ etc目录下profile文件
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT
 ```
+
 ### Chapter-1:HelloWorld ###
 - 知识点
 - 所有go文件以 ```package xxx``` 开头,对于独立运行的执行文件必须是 ```package main```
