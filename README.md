@@ -13,9 +13,8 @@ GO编译到机器码非常快速，同时具有遍历的垃圾回收和强大的
    export PATH=$PATH:/$GOBIN
 ```
 etc目录下profile文件
-```
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT
+```export GOROOT=/usr/local/go
+   export PATH=$PATH:$GOROOT
 ```
 
 ### Chapter-1:HelloWorld ###
