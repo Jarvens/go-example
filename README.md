@@ -4,6 +4,7 @@ Go编程语言是一个使得程序员更加有效率的开源项目。Go是具�
 它的并行机制使其很容易编写多核和网络应用,而新奇的类型系统允许构建有弹性的模块化程序。
 GO编译到机器码非常快速，同时具有遍历的垃圾回收和强大的运行时反射。
 它是快速的、静态类型编译语言，但是感觉上是动态类型的，解释性语言。
+
 ### 环境配置 ###
 - 从官网[http://www.golangtc.com/]下载Go语言安装包
 - 配置环境变量,以下是本机的环境变量配置信息
@@ -26,10 +27,14 @@ etc目录下profile文件
 - 编译&运行:
 - 构建HelloWorld只需要在控制台执行  ```go build HelloWorld.go```,编译后在工作目录下得到一个可执行文件 HelloWorld
 
-### Chanpter-2: 变量、基本类型###
+
+
+### Chanpter-2 变量 基本类型
+
 - Go语言同其它语言不通的地方在于变量的类型在变量名后面。例如JAVA:  int a;  Go:  a int;
 - 当定义了一个变量,它默认值为null值 例如 a int;  a=0  || a string;  a=""
 - 在Go中变量的声明和赋值是两个过程,但是可以连在一起,例如
+
 ```
     var a int;
     var b int;
@@ -49,24 +54,31 @@ etc目录下profile文件
 ```
 - 相同类型多个变量的声明方式
 ```
-    var e,f int;
-    e,f = 1,2;
-    fmt.Println(e,f);
-
-    g,h:=1,2;
-    fmt.Println(g,h);
+  var e,f int;
+  e,f = 1,2;
+  fmt.Println(e,f);
+  g,h:=1,2;
+  fmt.Println(g,h);
 ```
 
 - 特殊变量 _,此时i 为 4 ,如果打印_的话,控制台会输出cannot use _ as value ,究其原因为:任何值赋给_都将会被丢弃
 ```
-    _,i := 3,4;
-    fmt.Println(i);
+   _,i := 3,4;
+   fmt.Println(i);
 ```
 
-
-
-
-
+### Chapter-3 int
+- Go的 int诶性是由硬件决定适当的长度,意味着在32位硬件上 是32的 在64位的硬件上是64位的,注意()
+- 如果你希望明确其长度,可以使用int32 或者 uint 32 完整的证书类型列表(符号和无符号)是 int8,int16,int32,int64 和byte,unit8,uint16,uint32,uint64
+- byte是uint8的别名 浮点类型有 float32和float64(没有float类型),64位的整数和浮点数总是64位的,即使在32位的架构上,需要注意的是这些类型全部是独立的,并且混合使用这些类型向变量赋值会引起编译器错误
+```
+    //引起编译错误   invalid operation: a + b (mismatched types int and int32)
+    var a int;
+    var b int32;
+    a = 10;
+    b = 12;
+    fmt.Println(a + b);
+```
 
 
 

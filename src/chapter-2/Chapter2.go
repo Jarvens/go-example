@@ -1,6 +1,9 @@
 package main;
 
 import "fmt";
+func swap(x,y string)(string){
+    return x,y;
+}
 func main() {
     /**
     单一类型声明
@@ -32,6 +35,8 @@ func main() {
     fmt.Println(g,h);
 
     _,i := 3,4;
-    fmt.Println(_,i);
+    fmt.Println(i);
+    j:= swap("hello","world");
+    fmt.Println(j);
 
 }
