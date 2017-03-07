@@ -8,9 +8,10 @@ GO编译到机器码非常快速，同时具有遍历的垃圾回收和强大的
 - 从官网[http://www.golangtc.com/]下载Go语言安装包
 - 配置环境变量,以下是本机的环境变量配置信息
 当前home目录下的.bash_profile
-```export GOPATH=/Users/kunlun/Documents/WebStorm/go-example
-   export GOBIN=$GOPATH/bin
-   export PATH=$PATH:/$GOBIN
+```
+export GOPATH=/Users/kunlun/Documents/WebStorm/go-example
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:/$GOBIN
 ```
 etc目录下profile文件
 ```
