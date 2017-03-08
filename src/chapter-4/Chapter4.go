@@ -17,14 +17,14 @@ func main() {
     错误示例
      */
 
-    a := "hello"
-    + "world";
-    fmt.Println(a);
+    //a := "hello"
+    //+ "world";
+    //fmt.Println(a);
 
     /**
     正确示例
      */
 
-    b := "hello" + "world";
+    b := "中国" + "世界";
     fmt.Println(b);
 }

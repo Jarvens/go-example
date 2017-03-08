@@ -1,7 +1,7 @@
 package main;
 
 import "fmt";
-func swap(x,y string)(string){
+func swap(x,y string)(string,string){
     return x,y;
 }
 func main() {
@@ -36,7 +36,7 @@ func main() {
 
     _,i := 3,4;
     fmt.Println(i);
-    j:= swap("hello","world");
-    fmt.Println(j);
+    j,k:= swap("hello","world");
+    fmt.Println(j,k);
 
 }
