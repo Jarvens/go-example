@@ -29,6 +29,10 @@ func main() {
     fmt.Println(f, maxb, maxb);
     fmt.Println(f, c, c);
 
-    sum := 0
+    var a1 int;
+    var a2 float64;
+    var a3 string;
+    var a4 bool;
+    fmt.Println(a1,a2,a3,a4);
 }
 
